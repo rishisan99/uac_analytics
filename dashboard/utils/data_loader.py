@@ -95,6 +95,39 @@ def get_kpi_snapshot(df):
     }
 
 
+def get_stress_alert(df):
+    """
+    Early-warning check: compares the most recent 7-day average care load
+    against 80% of the all-time 90th-percentile stress threshold. This is
+    the leading indicator recommended in the project's executive summary
+    (R3) — meant to give planners 1-2 weeks of lead time before a
+    sustained stress period, rather than only reporting stress after it's
+    already underway.
+
+    The threshold is computed from the full, unfiltered dataset (a fixed
+    historical benchmark), while the current value respects whatever date
+    range is selected, so the alert reflects the most recent data in view.
+    """
+    if df.empty or "hhs_care_7day_avg" not in df.columns:
+        return None
+
+    current_avg = df["hhs_care_7day_avg"].dropna()
+    if current_avg.empty:
+        return None
+    current_avg = current_avg.iloc[-1]
+
+    full_df = load_data()
+    stress_threshold = full_df["hhs_care"].quantile(0.90)
+    warning_line = 0.8 * stress_threshold
+
+    return {
+        "current_avg": current_avg,
+        "stress_threshold": stress_threshold,
+        "pct_of_threshold": current_avg / stress_threshold * 100,
+        "is_approaching": current_avg >= warning_line,
+    }
+
+
 def get_granularity(df, granularity):
     """
     Resample the dataframe by day, week, or month.

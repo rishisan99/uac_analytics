@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.data_loader import load_data, filter_by_date, get_kpi_snapshot, get_granularity
+from utils.data_loader import load_data, filter_by_date, get_kpi_snapshot, get_granularity, get_stress_alert
 from components.kpi_cards import render_kpi_row, render_kpi_section_header
 from components.charts import (
     chart_hhs_trend,
@@ -43,6 +43,24 @@ def render(start_date, end_date, granularity):
     # ── KPI Cards Row ─────────────────────────────────────
     render_kpi_section_header(kpis["as_of_date"])
     render_kpi_row(kpis)
+
+    # ── Early-Warning Banner ──────────────────────────────
+    stress_alert = get_stress_alert(df)
+    if stress_alert:
+        pct = stress_alert["pct_of_threshold"]
+        if stress_alert["is_approaching"]:
+            st.warning(
+                f"⚠️ **Early warning:** the 7-day average care load "
+                f"({stress_alert['current_avg']:,.0f} children) is at **{pct:.0f}%** "
+                f"of the historical stress threshold "
+                f"({stress_alert['stress_threshold']:,.0f}) — past the 80% early-warning line."
+            )
+        else:
+            st.success(
+                f"✅ Within normal range — the 7-day average care load "
+                f"({stress_alert['current_avg']:,.0f} children) is at **{pct:.0f}%** "
+                f"of the historical stress threshold ({stress_alert['stress_threshold']:,.0f})."
+            )
 
     st.divider()
 
