@@ -32,15 +32,31 @@ st.markdown("""
         div[data-testid="stSidebarContent"] .stButton button {
             width: 100%;
             text-align: left;
-            background-color: transparent;
             border: none;
-            color: #e8e8f0;
             padding: 8px 12px;
             border-radius: 6px;
             font-size: 14px;
         }
-        div[data-testid="stSidebarContent"] .stButton button:hover {
+
+        /* inactive pages — transparent, subtle hover */
+        div[data-testid="stSidebarContent"] .stButton button[kind="secondary"] {
+            background-color: transparent;
+            color: #e8e8f0;
+        }
+        div[data-testid="stSidebarContent"] .stButton button[kind="secondary"]:hover {
             background-color: #2a2d3e;
+        }
+
+        /* active page — darkened + accent border so it's clearly highlighted */
+        div[data-testid="stSidebarContent"] .stButton button[kind="primary"] {
+            background-color: #2a2d3e;
+            border-left: 3px solid #7209b7;
+            padding-left: 9px;
+            color: #ffffff;
+            font-weight: 600;
+        }
+        div[data-testid="stSidebarContent"] .stButton button[kind="primary"]:hover {
+            background-color: #343850;
         }
     </style>
 """, unsafe_allow_html=True)
