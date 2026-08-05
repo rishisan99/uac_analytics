@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from utils.data_loader import load_data, filter_by_date, get_kpi_snapshot
+from utils.data_loader import load_data, filter_by_date, get_kpi_snapshot, get_granularity
 from components.kpi_cards import render_kpi_row, render_kpi_section_header
 from components.charts import chart_kpi_timeline, chart_stress_zone, chart_volatility
 
@@ -27,9 +27,10 @@ def render(start_date, end_date, granularity):
     st.divider()
 
     # ── Load & Filter Data ─
-    df   = load_data()
-    df   = filter_by_date(df, start_date, end_date)
-    kpis = get_kpi_snapshot(df)
+    df      = load_data()
+    df      = filter_by_date(df, start_date, end_date)
+    df_gran = get_granularity(df, granularity)
+    kpis    = get_kpi_snapshot(df)
 
     if df.empty:
         st.warning("No data found for the selected date range. Please adjust the filters.")
@@ -48,7 +49,7 @@ def render(start_date, end_date, granularity):
 
     with col_left:
         fig_k1 = chart_kpi_timeline(
-            df         = df,
+            df         = df_gran,
             kpi_col    = "total_system_load",
             title      = "Total Children Under Care (CBP + HHS)",
             color      = "#4361ee",
@@ -80,7 +81,7 @@ def render(start_date, end_date, granularity):
 
     with col_left:
         fig_k2 = chart_kpi_timeline(
-            df             = df,
+            df             = df_gran,
             kpi_col        = "net_intake_pressure",
             title          = "Net Intake Pressure (30-Day Rolling, % of HHS Load)",
             color          = "#f72585",
@@ -118,7 +119,7 @@ def render(start_date, end_date, granularity):
     col_left, col_right = st.columns([3, 1])
 
     with col_left:
-        fig_k3 = chart_volatility(df)
+        fig_k3 = chart_volatility(df_gran)
         st.plotly_chart(fig_k3, use_container_width=True)
 
     with col_right:
@@ -153,7 +154,7 @@ def render(start_date, end_date, granularity):
 
     with col_left:
         fig_k4 = chart_kpi_timeline(
-            df             = df,
+            df             = df_gran,
             kpi_col        = "backlog_rate",
             title          = "Backlog Accumulation Rate (30-Day Slope of Cumulative Intake)",
             color          = "#7209b7",
@@ -192,7 +193,7 @@ def render(start_date, end_date, granularity):
 
     with col_left:
         fig_k5 = chart_kpi_timeline(
-            df             = df,
+            df             = df_gran,
             kpi_col        = "discharge_offset_30day",
             title          = "Discharge Offset Ratio (30-Day Rolling: Discharges / Transfers)",
             color          = "#06d6a0",

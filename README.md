@@ -45,6 +45,7 @@ uac_analytics/
 │       ├── net_intake.py                              # Page 3 — net intake & backlog
 │       └── kpi_summary.py                             # Page 4 — full KPI timeline
 │
+├── screenshots/                                       # Dashboard screenshots used in this README
 ├── main.py                                            # Placeholder entry point (not part of the pipeline)
 ├── test_setup.py                                      # Quick check that core dependencies import correctly
 ├── pyproject.toml / uv.lock                           # Dependency manifest (uv)
@@ -171,7 +172,25 @@ The app opens at `http://localhost:8501`
 
 - **Date range** — filter all charts to a custom window
 - **Granularity** — switch between Daily, Weekly, and Monthly views
-- **Page navigation** — buttons to move between the four views
+- **Page navigation** — buttons to move between the four views; the active page is highlighted
+
+### Screenshots
+
+**Overview** — KPI cards, the early-warning banner, and the HHS care trend chart.
+
+![Overview page](screenshots/overview.png)
+
+**CBP vs HHS Flow** — transfers vs discharges and the discharge offset ratio.
+
+![CBP vs HHS Flow page](screenshots/cbp_hhs_flow.png)
+
+**Net Intake & Backlog** — daily net intake and cumulative backlog buildup.
+
+![Net Intake & Backlog page](screenshots/net_intake_backlog.png)
+
+**KPI Summary** — per-KPI detail plus the full 5-KPI comparison table.
+
+![KPI Summary page](screenshots/kpi_summary.png)
 
 ---
 
@@ -208,3 +227,4 @@ Raw file: `data/HHS_Unaccompanied_Alien_Children_Program.csv`
 - Chart images in `outputs/charts/` are numbered to match the section they came from in `02_eda.ipynb`.
 - The dashboard caches data with `@st.cache_data` — restart the app after regenerating `uac_enriched.csv` so it picks up the change.
 - If you install via pip instead of `uv sync`, package versions aren't pinned to the lockfile — results should still match, but exact library versions may differ slightly.
+
