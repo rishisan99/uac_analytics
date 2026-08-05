@@ -1,0 +1,109 @@
+
+
+UAC SYSTEM — EDA FINDINGS SUMMARY                       
+Data: 2023-01-12 to 2025-12-21              ║
+
+
+FINDING 1 — DRAMATIC SYSTEM DRAWDOWN (Section 1: Trends)
+─────────────────────────────────────────────────────────
+  HHS care load peaked at 11,516 children on December 20, 2023.
+  By December 21, 2025, load had fallen to 2,484 children —
+  a 78.4% decline from peak.
+
+  Year-over-year averages:
+    2023 avg: 8,646 children
+    2024 avg: 7,043 children
+    2025 avg: 2,543 children
+
+  The system experienced a clear and sustained decline across
+  all 3 years, suggesting improved processing and sponsor placement.
+
+FINDING 2 — DISCHARGE CAPACITY MOSTLY SUFFICIENT (Section 2: CBP vs HHS)
+──────────────────────────────────────────────────────────────────────────
+  Overall discharge offset ratio: 2.014
+  Days where discharges outpaced transfers: 479 (66.5%)
+  Days where transfers outpaced discharges: 238 (33.1%)
+  Transfer-discharge correlation: 0.657
+
+  On most days, HHS was able to discharge children at a rate
+  that kept up with or exceeded incoming transfers. The system
+  was more often draining than filling.
+
+FINDING 3 — STRESS CONCENTRATED IN ONE PERIOD (Section 3: Stress)
+──────────────────────────────────────────────────────────────────
+  Total high-stress days: 73 (10.1% of all reporting days)
+  Stress days by year:
+    2023: 69 days
+    2024: 4 days
+    2025: 0 days
+
+  Longest sustained stress window:
+    August 22, 2023 → October 19, 2023
+    (41 consecutive reporting days)
+    Avg load: 10,595 | Peak: 11,130
+
+  All stress was concentrated in Aug 2023 – Jan 2024.
+  Zero high-stress days recorded in all of 2025.
+
+FINDING 4 — BACKLOG BUILT FAST, CLEARED SLOWLY (Section 4: Backlog)
+─────────────────────────────────────────────────────────────────────
+  Peak cumulative backlog: -402 children on January 12, 2023
+  Current cumulative level: -32,212
+  Average net daily intake: -44.7 children/day
+
+  Filling days (intake > discharge): 238 (33.1%)
+  Draining days (discharge > intake): 482 (66.9%)
+
+  The backlog built rapidly during the 2023 surge but has been
+  consistently clearing through 2024 and 2025.
+
+FINDING 5 — CLEAR SEASONAL PATTERN (Section 5: Seasonality)
+─────────────────────────────────────────────────────────────
+  Historically highest month: Jan (avg 6,990 children)
+  Highest quarter overall:    Q1
+
+  The same calendar months appear elevated across multiple years,
+  indicating structural seasonal demand — not random spikes.
+  This has direct implications for pre-emptive staffing decisions.
+
+FINDING 6 — KPI STATUS (Section 6: KPIs)
+─────────────────────────────────────────
+  As of 2025-12-21:
+    Total children under care:   2,502
+    Net intake pressure:         +0.01% (filling)
+    Volatility index:            2.64%
+    Backlog accumulation rate:   +0.27 children/day
+    Discharge offset ratio:      0.971 (under pressure)
+
+
+
+RECOMMENDATIONS FOR POLICY & OPERATIONS                 
+
+
+R1 — PRE-EMPTIVE SEASONAL STAFFING
+   Historical data shows Jan and Q4 are structurally
+   high-load periods every year. HHS should increase shelter
+   capacity and staffing 4–6 weeks before these windows open,
+   not in response to them.
+
+R2 — MAINTAIN DISCHARGE THROUGHPUT AS PRIORITY
+   The single most effective lever for reducing system load is
+   faster sponsor vetting and placement. The data shows the
+   system drains fastest when discharges consistently exceed
+   transfers — sustaining this should be the operational priority.
+
+R3 — ESTABLISH A REAL-TIME STRESS THRESHOLD ALERT
+   The 90th percentile threshold (9,762 children) proved a
+   meaningful early warning line. An automated alert when the
+   7-day rolling average crosses 80% of this threshold would
+   give planners 1–2 weeks of response time before a crisis.
+
+R4 — MONITOR THE BACKLOG RATE WEEKLY
+   The backlog accumulation rate (KPI 4) is the earliest leading
+   indicator of systemic pressure. A rate that turns positive
+   for more than 5 consecutive days should trigger a capacity review.
+
+R5 — LEVERAGE THE 2025 LOW AS A PLANNING BASELINE
+   The current low-load environment (avg 2,543 in 2025) is an
+   opportunity to stress-test the system, retrain staff, and
+   establish the monitoring infrastructure before the next surge.

@@ -1,0 +1,30 @@
+[theme]
+# main background — dark navy, professional government analytics feel
+backgroundColor = "#0f1117"
+
+# sidebar background — slightly lighter than main
+secondaryBackgroundColor = "#1a1d2e"
+
+# all text on dark background
+textColor = "#e8e8f0"
+
+# accent color — the purple we used throughout the notebook charts
+primaryColor = "#7209b7"
+
+# font — clean and readable for data dashboards
+font = "sans serif"
+
+[server]
+# prevent the browser from auto-opening every time you run
+headless = false
+
+# auto-reload when you save a .py file — essential during development
+runOnSave = true
+
+[browser]
+# shows in the browser tab
+gatherUsageStats = false
+
+[runner]
+# faster reruns — skips unnecessary computations
+fastReruns = true

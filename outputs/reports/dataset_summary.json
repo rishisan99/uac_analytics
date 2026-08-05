@@ -1,0 +1,21 @@
+{
+    "date_range": {
+        "start": "2023-01-12",
+        "end": "2025-12-21"
+    },
+    "total_reporting_days": 720,
+    "hhs_care": {
+        "peak_value": 11516,
+        "peak_date": "2023-12-20",
+        "lowest_value": 1972,
+        "lowest_date": "2025-08-21"
+    },
+    "averages": {
+        "daily_intake_into_hhs": 128.7,
+        "daily_discharge_from_hhs": 173.4,
+        "net_daily_intake": -44.7
+    },
+    "system_load": {
+        "peak_total": 11762
+    }
+}

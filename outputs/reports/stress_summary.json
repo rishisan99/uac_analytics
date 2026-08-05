@@ -1,0 +1,59 @@
+{
+  "threshold": {
+    "value": 9762.0,
+    "method": "90th percentile of all HHS care values"
+  },
+  "overall": {
+    "total_stress_days": 73,
+    "total_reporting_days": 720,
+    "stress_pct": 10.1,
+    "total_stress_windows": 3
+  },
+  "longest_window": {
+    "start_date": "2023-08-22",
+    "end_date": "2023-10-19",
+    "duration_days": 41,
+    "avg_load": 10595.0,
+    "peak_load": 11130.0
+  },
+  "all_windows": [
+    {
+      "start_date": "2023-08-22",
+      "end_date": "2023-10-19",
+      "duration_days": 41,
+      "avg_load": 10595.0,
+      "peak_load": 11130.0
+    },
+    {
+      "start_date": "2023-11-21",
+      "end_date": "2024-01-04",
+      "duration_days": 30,
+      "avg_load": 10800.0,
+      "peak_load": 11516.0
+    },
+    {
+      "start_date": "2023-11-15",
+      "end_date": "2023-11-16",
+      "duration_days": 2,
+      "avg_load": 9762.0,
+      "peak_load": 9762.0
+    }
+  ],
+  "yearly_breakdown": {
+    "2023": {
+      "stress_days": 69,
+      "total_days": 230,
+      "stress_pct": 30.0
+    },
+    "2024": {
+      "stress_days": 4,
+      "total_days": 251,
+      "stress_pct": 1.6
+    },
+    "2025": {
+      "stress_days": 0,
+      "total_days": 239,
+      "stress_pct": 0.0
+    }
+  }
+}

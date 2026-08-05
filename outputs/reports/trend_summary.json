@@ -1,0 +1,25 @@
+{
+  "yearly_stats": {
+    "2023": {
+      "avg_hhs_care": 8646,
+      "peak_hhs_care": 11516,
+      "lowest_hhs_care": 5679
+    },
+    "2024": {
+      "avg_hhs_care": 7043,
+      "peak_hhs_care": 10870,
+      "lowest_hhs_care": 5664
+    },
+    "2025": {
+      "avg_hhs_care": 2543,
+      "peak_hhs_care": 6405,
+      "lowest_hhs_care": 1972
+    }
+  },
+  "overall_direction": {
+    "avg_2023": 8646.0,
+    "avg_2025": 2543.0,
+    "change_pct": -70.6,
+    "direction": "decrease"
+  }
+}

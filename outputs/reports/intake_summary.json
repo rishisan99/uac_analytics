@@ -1,0 +1,21 @@
+{
+  "daily_balance": {
+    "filling_days": 238,
+    "filling_pct": 33.1,
+    "draining_days": 482,
+    "draining_pct": 66.9,
+    "total_days": 720
+  },
+  "daily_extremes": {
+    "peak_single_day_intake": 206,
+    "peak_single_day_drain": -465,
+    "avg_net_daily_intake": -44.74
+  },
+  "backlog": {
+    "peak_cumulative_backlog": -402,
+    "peak_backlog_date": "2023-01-12",
+    "recovery_status": "cleared",
+    "recovery_date": "2023-01-12",
+    "current_cumulative_level": 0
+  }
+}

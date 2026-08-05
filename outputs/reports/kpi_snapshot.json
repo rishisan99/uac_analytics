@@ -1,0 +1,28 @@
+{
+    "as_of_date": "2025-12-21",
+    "kpi_1_total_children_under_care": {
+        "current": 2502,
+        "peak": 11762,
+        "average": 6233
+    },
+    "kpi_2_net_intake_pressure_pct": {
+        "current": 0.01,
+        "peak": 0.75,
+        "status": "filling"
+    },
+    "kpi_3_volatility_index_pct": {
+        "current": 2.64,
+        "peak": 26.04,
+        "average": 6.02
+    },
+    "kpi_4_backlog_accumulation_rate": {
+        "current": 0.27,
+        "peak": 56.6,
+        "status": "growing"
+    },
+    "kpi_5_discharge_offset_ratio": {
+        "current": 0.971,
+        "average": 1.477,
+        "status": "under pressure"
+    }
+}
