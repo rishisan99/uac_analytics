@@ -145,7 +145,7 @@ def get_granularity(df, granularity):
     mean_cols = [
         "cbp_custody", "hhs_care", "total_system_load",
         "hhs_care_7day_avg", "hhs_care_14day_avg",
-        "net_intake_pressure", "volatility_index",
+        "net_intake_pressure", "volatility_index", "volatility_14day",
         "backlog_rate", "discharge_offset_30day",
         "discharge_offset_ratio", "cumulative_net_intake"
     ]
