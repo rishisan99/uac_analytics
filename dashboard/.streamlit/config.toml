@@ -15,8 +15,11 @@ primaryColor = "#7209b7"
 font = "sans serif"
 
 [server]
-# prevent the browser from auto-opening every time you run
-headless = false
+# headless=true on the deploy branch: Streamlit Cloud has no browser/TTY to
+# open, and headless=false here was causing the app to block on the
+# interactive onboarding-email prompt forever (main keeps headless=false
+# for local dev, where auto-opening the browser is actually useful)
+headless = true
 
 # auto-reload when you save a .py file — essential during development
 runOnSave = true
