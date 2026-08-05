@@ -227,3 +227,4 @@ Raw file: `data/HHS_Unaccompanied_Alien_Children_Program.csv`
 - Chart images in `outputs/charts/` are numbered to match the section they came from in `02_eda.ipynb`.
 - The dashboard caches data with `@st.cache_data` — restart the app after regenerating `uac_enriched.csv` so it picks up the change.
 - If you install via pip instead of `uv sync`, package versions aren't pinned to the lockfile — results should still match, but exact library versions may differ slightly.
+
