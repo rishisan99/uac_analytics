@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import pandas as pd
 import streamlit as st
 
@@ -13,8 +15,10 @@ import streamlit as st
 # ─────────────────────────────────────────────────────────
 
 
-# path to the enriched dataset — relative to dashboard/app.py
-DATA_PATH = "../data/uac_enriched.csv"
+# path to the enriched dataset — resolved from this file's location so it
+# works regardless of the process's working directory (e.g. Streamlit
+# Community Cloud runs the app from the repo root, not from dashboard/)
+DATA_PATH = Path(__file__).resolve().parents[2] / "data" / "uac_enriched.csv"
 
 
 @st.cache_data
